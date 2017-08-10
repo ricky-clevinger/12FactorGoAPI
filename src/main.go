@@ -7,7 +7,6 @@ import (
 	"os"
 	"fmt"
 	"database/sql"
-	//"html/template"
 	"net/http"
 	"encoding/json"
 	_ "github.com/go-sql-driver/mysql"
@@ -29,7 +28,7 @@ type Book struct{
 	Book_authF string `json:"Book_authF"`
 	Book_authL string `json:"Book_authL"`
 	Library_id int `json:"Library_id"`
-	Book_check int `json:"Book_check"`
+	Book_check string `json:"Book_check"`
 	Mid int `json:"Mid"`
 	Book_out_date sql.NullString `json:"Book_out_date"`
 	Member_fname sql.NullString `json:"Member_fname"`
@@ -74,7 +73,7 @@ func getBooks(w http.ResponseWriter, r *http.Request) {
 	defer db.Close() //Close after func GetBook ends
 
 	//Grab entire rows of data within a query
-	bookRows, err := db.Query("SELECT b.Book_Id, b.Book_Title, b.Book_AuthFName, b.Book_AuthLName, b.Library_Id, b.Book_Check, b.Mid, date_format(b.Book_Out_Date, '%Y-%m-%d'), m.Member_fname, m.Member_lname FROM books b LEFT JOIN member m ON b.Mid = m.Member_id")
+	bookRows, err := db.Query("SELECT b.Book_Id, b.Book_Title, b.Book_AuthFName, b.Book_AuthLName, b.Library_Id, CASE WHEN b.Book_check = 1 THEN 'In' ELSE 'Out' END AS B_check, b.Mid, date_format(b.Book_Out_Date, '%Y-%m-%d'), m.Member_fname, m.Member_lname FROM books b LEFT JOIN member m ON b.Mid = m.Member_id")
 	//Check for Errors in DB Query
 	checkErr(err)
 	//For Every Book Row that's not null/nil place
