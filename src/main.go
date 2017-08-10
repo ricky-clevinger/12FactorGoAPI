@@ -32,6 +32,8 @@ type Book struct{
 	Book_check int `json:"Book_check"`
 	Mid int `json:"Mid"`
 	Book_out_date sql.NullString `json:"Book_out_date"`
+	Member_fname sql.NullString `json:"Member_fname"`
+	Member_lname sql.NullString `json:"Member_lname"`
 }
 
 //Checks for errors
@@ -72,13 +74,13 @@ func getBooks(w http.ResponseWriter, r *http.Request) {
 	defer db.Close() //Close after func GetBook ends
 
 	//Grab entire rows of data within a query
-	bookRows, err := db.Query("SELECT Book_Id, Book_Title, Book_AuthFName, Book_AuthLName, Library_Id, Book_Check, Mid, date_format(Book_Out_Date, '%Y-%m-%d') FROM books")
+	bookRows, err := db.Query("SELECT b.Book_Id, b.Book_Title, b.Book_AuthFName, b.Book_AuthLName, b.Library_Id, b.Book_Check, b.Mid, date_format(b.Book_Out_Date, '%Y-%m-%d'), m.Member_fname, m.Member_lname FROM books b LEFT JOIN member m ON b.Mid = m.Member_id")
 	//Check for Errors in DB Query
 	checkErr(err)
 	//For Every Book Row that's not null/nil place
 	for bookRows.Next() {
 		b := Book{} //book type
-		err = bookRows.Scan(&b.Book_id, &b.Book_title, &b.Book_authF, &b.Book_authL, &b.Library_id, &b.Book_check, &b.Mid, &b.Book_out_date)
+		err = bookRows.Scan(&b.Book_id, &b.Book_title, &b.Book_authF, &b.Book_authL, &b.Library_id, &b.Book_check, &b.Mid, &b.Book_out_date, &b.Member_fname, &b.Member_lname)
 		checkErr(err)
 		if b.Book_out_date.Valid{
 			books = append(books, b)
