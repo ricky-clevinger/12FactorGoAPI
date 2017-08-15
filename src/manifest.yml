@@ -1,6 +1,6 @@
 ---
 applications:
-- name: library-go-web-app
+- name: library-go-web-api
   disk: 256M
   memory: 128M
   random-route: true
