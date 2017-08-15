@@ -27,5 +27,5 @@ jobs:
     privileged: true
   - put: library-deploy
     params:
-       manifest: go-library-source/src/manifest.yml
+       manifest: go-library-source/src/12FactorGoAPI/manifest.yml
        path: go-library-source/src/12FactorGoAPI
