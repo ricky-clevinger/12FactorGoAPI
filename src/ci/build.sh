@@ -4,6 +4,6 @@ cd go-library-source
 ls -a
 export GOPATH=$PWD
 export PATH=$PATH:$GOPATH
-cd src
+cd /src
 ls -a
 go build main.go
