@@ -2,7 +2,7 @@
 set -e -u -x
 cd go-library-source
 ls -a
-export GOPATH=/usr/local/go
+export GOPATH=/src
 export PATH=$PATH:$GOPATH
 cd src
 ls -a
