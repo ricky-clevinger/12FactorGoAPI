@@ -23,9 +23,9 @@ jobs:
   - get: go-library-source
     trigger: true
   - task: build-deploy-go-library
-    file: go-library-source/src/ci/build.yml
+    file: go-library-source/src/12FactorGoAPI/ci/build.yml
     privileged: true
   - put: library-deploy
     params:
        manifest: go-library-source/src/manifest.yml
-       path: go-library-source/src/
+       path: go-library-source/src/12FactorGoAPI
