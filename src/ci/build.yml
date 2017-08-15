@@ -1,0 +1,17 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: golang
+    tag: "latest"
+    
+inputs:
+- name: go-library-source
+
+outputs:
+- name: built-project
+
+run:
+  path: go-library-source/12FactorGoAPI/src/ci/build.sh

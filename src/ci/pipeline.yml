@@ -1,0 +1,31 @@
+---
+resources:
+- name: go-library-source
+  type: git
+  source:
+    uri: https://github.com/ricky-clevinger/12FactorGoAPI
+    branch: master
+
+- name: library-deploy
+  type: cf
+  source:
+    api: {{cf-api}}
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-organization}}
+    space: {{cf-space}}
+    skip_cert_check: true
+    
+jobs:
+- name: deploy
+  serial: true
+  plan:
+  - get: go-library-source
+    trigger: true
+  - task: build-deploy-go-library
+    file: go-library-source/12FactorAPI/src/ci/build.yml
+    privileged: true
+  - put: libraryAPI-deploy
+    params:
+       manifest: go-library-source/12FactorGoAPI/src/manifest.yml
+       path: go-library-source/12FactorGoAPI/src
