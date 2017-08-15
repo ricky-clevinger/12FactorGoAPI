@@ -14,4 +14,4 @@ outputs:
 - name: built-project
 
 run:
-  path: go-library-source/12FactorGoAPI/src/ci/build.sh
+  path: go-library-source/src/ci/build.sh
