@@ -28,4 +28,4 @@ jobs:
   - put: library-deploy
     params:
        manifest: go-library-source/src/manifest.yml
-       path: go-library-source/src
+       path: go-library-source/src/vendor
