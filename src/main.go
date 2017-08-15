@@ -9,7 +9,7 @@ import (
 	"database/sql"
 	"net/http"
 	"encoding/json"
-	_ "Vender/github.com/go-sql-driver/mysql"
+	_ "github.com/go-sql-driver/mysql"
 	"log"
 )
 
