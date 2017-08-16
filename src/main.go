@@ -4,35 +4,35 @@ package main
 //Last Updated: 8/3/2017
 
 import (
-	"os"
-	"fmt"
 	"database/sql"
-	"net/http"
 	"encoding/json"
+	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
+	"net/http"
+	"os"
 )
 
 //Gets the connection string
 var connectionString = os.Getenv("LIBRARY")
 
 type Member struct {
-	Member_id int `json:"Member_id"`
+	Member_id    int    `json:"Member_id"`
 	Member_fname string `json:"Member_fname"`
 	Member_lname string `json:"Member_lname"`
 }
 
-type Book struct{
-	Book_id int `json:"Book_id"`
-	Book_title string `json:"Book_title"`
-	Book_authF string `json:"Book_authF"`
-	Book_authL string `json:"Book_authL"`
-	Library_id int `json:"Library_id"`
-	Book_check string `json:"Book_check"`
-	Mid int `json:"Mid"`
+type Book struct {
+	Book_id       int            `json:"Book_id"`
+	Book_title    string         `json:"Book_title"`
+	Book_authF    string         `json:"Book_authF"`
+	Book_authL    string         `json:"Book_authL"`
+	Library_id    int            `json:"Library_id"`
+	Book_check    string         `json:"Book_check"`
+	Mid           int            `json:"Mid"`
 	Book_out_date sql.NullString `json:"Book_out_date"`
-	Member_fname sql.NullString `json:"Member_fname"`
-	Member_lname sql.NullString `json:"Member_lname"`
+	Member_fname  sql.NullString `json:"Member_fname"`
+	Member_lname  sql.NullString `json:"Member_lname"`
 }
 
 //Checks for errors
@@ -52,7 +52,7 @@ func getMembers(w http.ResponseWriter, r *http.Request) {
 
 	memberRows, err := db.Query("SELECT member_id, member_fname, member_lname FROM member")
 	checkErr(err)
-	
+
 	for memberRows.Next() {
 		m := Member{}
 		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname)
@@ -81,7 +81,7 @@ func getBooks(w http.ResponseWriter, r *http.Request) {
 		b := Book{} //book type
 		err = bookRows.Scan(&b.Book_id, &b.Book_title, &b.Book_authF, &b.Book_authL, &b.Library_id, &b.Book_check, &b.Mid, &b.Book_out_date, &b.Member_fname, &b.Member_lname)
 		checkErr(err)
-		if b.Book_out_date.Valid{
+		if b.Book_out_date.Valid {
 			books = append(books, b)
 		} else {
 			b.Book_out_date.String = ""
@@ -93,7 +93,7 @@ func getBooks(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(books)
 }
 
-func homePage (w http.ResponseWriter, r *http.Request) {
+func homePage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome")
 }
 
@@ -101,7 +101,7 @@ func handleRequests() {
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/members", getMembers)
 	http.HandleFunc("/books", getBooks)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func main() {
