@@ -15,6 +15,9 @@ import (
 )
 
 //Gets the connection string
+
+//Move the environment variable assignment
+
 var connectionString = os.Getenv("LIBRARY")
 
 type Member struct {
@@ -36,23 +39,11 @@ type Book struct {
 	Member_lname  sql.NullString `json:"Member_lname"`
 }
 
-/* Likely Deprecated, but needs testing
-
-//Checks for errors
-func checkErr(err error) {
-	if err != nil {
-		log.Panic(err)
-	}
-}
-
-*/
-
 //Get Members
 func getMembers(w http.ResponseWriter, r *http.Request) {
 	var members []Member
 
 	db, err := sql.Open("mysql", connectionString)
-	//checkErr(err)
 	helper.CheckErr(err)
 	defer db.Close()
 
