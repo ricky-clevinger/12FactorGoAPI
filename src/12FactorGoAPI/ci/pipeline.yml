@@ -20,11 +20,11 @@ resources:
   type: semver
   source:
     driver: git
-    uri: https://github.com/ricky-clevinger/Versions
+    uri: https://github.com/ricky-clevinger/12FactorGoAPI
     username: ricky-clevinger
     password: 123098Rlc
-    branch: master
-    file: 12FactorGoAPI
+    branch: version
+    file: version
     
 jobs:
 - name: unit-test-go
