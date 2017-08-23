@@ -24,7 +24,7 @@ resources:
     username: ricky-clevinger
     password: 123098Rlc
     branch: master
-    file: 12FactorGoLibrary
+    file: 12FactorGoAPI
     
 jobs:
 - name: unit-test-go
@@ -42,6 +42,8 @@ jobs:
   - get: go-library-source
     passed: [ unit-test-go ]
     trigger: true
+  - put: version
+    params: {bump: patch}
   - task: build-deploy-go-library
     file: go-library-source/src/12FactorGoAPI/ci/build.yml
     privileged: true
