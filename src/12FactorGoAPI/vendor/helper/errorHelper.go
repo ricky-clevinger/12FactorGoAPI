@@ -9,3 +9,5 @@ func CheckErr(err error) {
 		log.Panic(err)
 	}
 }
+
+//Add additional logging
