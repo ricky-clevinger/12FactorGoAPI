@@ -16,12 +16,34 @@ resources:
     space: {{cf-space}}
     skip_cert_check: true
     
+- name: version
+  type: semver
+  source:
+    driver: git
+    uri: https://github.com/ricky-clevinger/12FactorGoAPI
+    username: ricky-clevinger
+    password: 123098Rlc
+    branch: version
+    file: version
+    
 jobs:
-- name: deploy
+- name: unit-test-go
   serial: true
   plan:
   - get: go-library-source
     trigger: true
+  - task: go-unit-tests
+    file: go-library-source/src/12FactorGoAPI/ci/goUnitTest.yml
+    privileged: true
+    
+- name: deploy
+  serial: true
+  plan:
+  - get: go-library-source
+    passed: [ unit-test-go ]
+    trigger: true
+  - put: version
+    params: {bump: patch}
   - task: build-deploy-go-library
     file: go-library-source/src/12FactorGoAPI/ci/build.yml
     privileged: true
