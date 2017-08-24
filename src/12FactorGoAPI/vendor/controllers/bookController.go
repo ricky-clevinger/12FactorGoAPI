@@ -17,9 +17,9 @@ func GetBooks(writer http.ResponseWriter, request *http.Request) {
 
 func AddBooks(writer http.ResponseWriter, request *http.Request){
 
-	var title string = request.PostForm.Get("title")
-	var authF string = request.PostForm.Get("fname")
-	var authL string = request.PostForm.Get("lname")
+	var title string = request.FormValue("title")
+	var authF string = request.FormValue("fname")
+	var authL string = request.FormValue("lname")
 
 	if(len(title) == 0 || len(authF) == 0 || len(authL) == 0){
 
@@ -30,9 +30,25 @@ func AddBooks(writer http.ResponseWriter, request *http.Request){
 		database.AddBook(title, authF, authL)
 
 		writer.WriteHeader(http.StatusOK)
-		writer.Write([]byte("Success"))
+		writer.Write([]byte("Success\n"))
 	}
 
 
 }
 
+func GetSearchedBooks (writer http.ResponseWriter, request *http.Request){
+
+	searchString := ""
+
+	database.GetSearchedBook(searchString)
+}
+
+func GetCheckedInBooks(writer http.ResponseWriter, request *http.Request){
+
+
+}
+
+func GetCheckedOutBooks(writer http.ResponseWriter, request *http.Request){
+
+
+}
