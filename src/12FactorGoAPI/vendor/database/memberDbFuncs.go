@@ -65,47 +65,6 @@ func ReturnMembersById (id string) []Member {
 	return members
 }
 
-//Get Member by ID
-func GetMemberById(id string) []Member {
-	var member []Member
-	var members []Member
-
-	intId, err := strconv.Atoi(id)
-	helper.CheckErr(err)
-
-	/*request, err := http.NewRequest("GET", url, nil)
-	helper.CheckErr(err)
-
-	client := &http.Client{}
-
-	response, err := client.Do(request)
-	helper.CheckErr(err)
-	defer response.Body.Close()
-
-	err = json.NewDecoder(response.Body).Decode(&members)
-	helper.CheckErr(err)*/
-
-	memberRows, err1 := db.Query("SELECT member_id, member_fname, member_lname FROM member WHERE member_id = ?", intId)
-	helper.CheckErr(err1)
-
-	for memberRows.Next() {
-
-		m := Member{}
-		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname)
-		helper.CheckErr(err)
-		members = append(members, m)
-	}
-
-	for i := 0; i < len(members); i++ {
-		membersId := members[i].Member_id
-
-		if membersId == intId {
-			member = append(member, members[i])
-		}
-	}
-
-	return member
-}
 
 //Get Members using search
 func GetSearchedMember(s string) []Member {
