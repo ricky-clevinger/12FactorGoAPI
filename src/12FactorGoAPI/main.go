@@ -24,7 +24,7 @@ func handleRequests() {
 	router.HandleFunc("/members/add", controllers.AddMember)
 	router.HandleFunc("/members/delete", controllers.DeleteMember)
 	router.HandleFunc("/members/update", controllers.UpdateMember)
-	router.HandleFunc("/members/{id}", controllers.GetMembersById)
+	router.HandleFunc("/members/id/{id}", controllers.GetMembersById)
 	router.HandleFunc("/books", controllers.GetBooks)
 	router.HandleFunc("/books/add/{title}/{authF}/{authL}", controllers.AddBook)
 	router.HandleFunc("/books/{id}", controllers.GetBooksById)

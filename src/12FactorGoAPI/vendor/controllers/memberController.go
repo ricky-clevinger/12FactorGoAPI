@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"database"
 	"encoding/json"
+	"mux"
 )
 
 
@@ -21,15 +22,8 @@ func GetMembers(writer http.ResponseWriter, request *http.Request) {
  */
 func GetMembersById(writer http.ResponseWriter, request *http.Request){
 
-	id := request.PostForm.Get("memId")
-
-	/*vars := mux.Vars(r)
-	w.WriteHeader(http.StatusOK)
-
-	members := database.ReturnMembersById(vars["id"])
-
-	json.NewEncoder(w).Encode(members)*/
-
+	varArray := mux.Vars(request)
+	id := varArray["id"]
 
 	if(len(id) == 0){
 
@@ -37,14 +31,9 @@ func GetMembersById(writer http.ResponseWriter, request *http.Request){
 		writer.Write([]byte("Missing Id - Notify administrator"))
 	}else{
 
-		members := database.GetMemberById(id)
+		members := database.ReturnMembersById(id)
 		json.NewEncoder(writer).Encode(members)
-		writer.WriteHeader(http.StatusOK)
-		writer.Write([]byte("Success"))
 	}
-
-
-
 
 }
 
