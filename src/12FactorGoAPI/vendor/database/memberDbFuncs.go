@@ -7,8 +7,6 @@ import(
 	"helper"
 
 	"strconv"
-	//"net/http"
-	//"encoding/json"
 	"fmt"
 )
 
@@ -43,14 +41,14 @@ func ReturnAllMembers () []Member {
 	return members
 }
 
-<<<<<<< HEAD
+
 func ReturnMembersById (id string) string {
 
 
 
 	return id
 }
-=======
+
 //Get Member by ID
 func GetMemberById(id string) []Member {
 	var member []Member
@@ -122,4 +120,4 @@ func GetSearchedMember(s string) []Member {
 }
 
 
->>>>>>> d1803272a1335b543f8b328cc0c84b956b1aacb2
+

@@ -4,18 +4,21 @@ package main
 //Last Updated: 8/3/2017
 //
 import (
-	"log"
 	"net/http"
 	"database"
+	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/gorilla/mux"
 	"mux"
+	"fmt"
+	"encoding/json"
+	"log"
 )
 
 
 //Get Members
 func getMembers(writer http.ResponseWriter, request *http.Request) {
 
-	members := database.ReturnMembers()
+	members := database.ReturnAllMembers()
 
 	json.NewEncoder(writer).Encode(members)
 }
@@ -34,7 +37,7 @@ func getMembersById(w http.ResponseWriter, r *http.Request) {
 //Get Books
 func getBooks(w http.ResponseWriter, r *http.Request) {
 
-	books := database.ReturnBooks()
+	books := database.ReturnAllBooks()
 
 	json.NewEncoder(w).Encode(books)
 }
@@ -55,11 +58,12 @@ func handleRequests() {
 	r.HandleFunc("/members/{id}", getMembersById)
 	r.HandleFunc("/books", getBooks)
 	http.Handle("/", r)
-=======
-	"controllers"
-)
+	log.Fatal(http.ListenAndServe(":8081",nil))
+
+}
 
 
 func main() {
 	handleRequests()
+	
 }
