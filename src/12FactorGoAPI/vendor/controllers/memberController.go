@@ -64,10 +64,15 @@ func GetSearchedMembers(writer http.ResponseWriter, request *http.Request){
 
 func AddMember(writer http.ResponseWriter, request *http.Request){
 
-
+	//TODO
 }
 
 func DeleteMember(writer http.ResponseWriter, request *http.Request){
 
+	//TODO
+}
 
+func UpdateMember(writer http.ResponseWriter, request *http.Request){
+
+	//TODO
 }

@@ -4,4 +4,12 @@ import (
 
 )
 
+func WriteTransactionLogCheckIn(){
 
+
+}
+
+func WriteTransactionLogCheckOut(){
+
+
+}

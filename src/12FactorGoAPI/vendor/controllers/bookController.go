@@ -15,7 +15,7 @@ func GetBooks(writer http.ResponseWriter, request *http.Request) {
 }
 
 
-func AddBooks(writer http.ResponseWriter, request *http.Request){
+func AddBook(writer http.ResponseWriter, request *http.Request){
 
 	var title string = request.FormValue("title")
 	var authF string = request.FormValue("fname")
@@ -49,6 +49,21 @@ func GetCheckedInBooks(writer http.ResponseWriter, request *http.Request){
 }
 
 func GetCheckedOutBooks(writer http.ResponseWriter, request *http.Request){
+
+
+}
+
+func DeleteBook(writer http.ResponseWriter, request *http.Request){
+
+
+}
+
+func UpdateBook(writer http.ResponseWriter, request *http.Request){
+
+
+}
+
+func GetBooksById(writer http.ResponseWriter, request *http.Request){
 
 
 }
