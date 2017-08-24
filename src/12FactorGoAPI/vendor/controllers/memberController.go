@@ -23,6 +23,14 @@ func GetMembersById(writer http.ResponseWriter, request *http.Request){
 
 	id := request.PostForm.Get("memId")
 
+	/*vars := mux.Vars(r)
+	w.WriteHeader(http.StatusOK)
+
+	members := database.ReturnMembersById(vars["id"])
+
+	json.NewEncoder(w).Encode(members)*/
+
+
 	if(len(id) == 0){
 
 		writer.WriteHeader(http.StatusNotAcceptable)
@@ -47,9 +55,19 @@ func GetMembersById(writer http.ResponseWriter, request *http.Request){
  */
 func GetSearchedMembers(writer http.ResponseWriter, request *http.Request){
 
-	members := database.ReturnAllMembers()
+	searchString := request.FormValue("s-bar")
+
+	members := database.GetSearchedMember(searchString)
 
 	json.NewEncoder(writer).Encode(members)
 }
 
+func AddMember(writer http.ResponseWriter, request *http.Request){
 
+
+}
+
+func DeleteMember(writer http.ResponseWriter, request *http.Request){
+
+
+}
