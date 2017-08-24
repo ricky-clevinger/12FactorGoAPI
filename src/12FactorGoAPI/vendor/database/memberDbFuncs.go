@@ -42,11 +42,27 @@ func ReturnAllMembers () []Member {
 }
 
 
-func ReturnMembersById (id string) string {
+func ReturnMembersById (id string) []Member {
 
 
+	var members []Member
 
-	return id
+	db, err := sql.Open("mysql", connectionString)
+	helper.CheckErr(err)
+	defer db.Close()
+
+	memberRows, err1 := db.Query("SELECT member_id, member_fname, member_lname FROM member WHERE member_id=" + id)
+	helper.CheckErr(err1)
+
+	for memberRows.Next() {
+
+		m := Member{}
+		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname)
+		helper.CheckErr(err)
+		members = append(members, m)
+	}
+
+	return members
 }
 
 //Get Member by ID
