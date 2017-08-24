@@ -4,9 +4,6 @@ package main
 //Last Updated: 8/3/2017
 //
 import (
-	"encoding/json"
-	"fmt"
-	_ "github.com/go-sql-driver/mysql"
 	"log"
 	"net/http"
 	"database"
@@ -28,7 +25,6 @@ func getMembersById(w http.ResponseWriter, r *http.Request) {
 
 	vars := mux.Vars(r)
 	w.WriteHeader(http.StatusOK)
-	//fmt.Fprintf(w, "Category: %v\n", vars["category"])
 	
 	members := database.ReturnMembersById(vars["id"])
 
@@ -59,8 +55,10 @@ func handleRequests() {
 	r.HandleFunc("/members/{id}", getMembersById)
 	r.HandleFunc("/books", getBooks)
 	http.Handle("/", r)
-	log.Fatal(http.ListenAndServe(":8081", nil))
-}
+=======
+	"controllers"
+)
+
 
 func main() {
 	handleRequests()
