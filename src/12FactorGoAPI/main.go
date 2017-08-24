@@ -30,7 +30,7 @@ func handleRequests() {
 	router.HandleFunc("/books/checkedout", controllers.GetCheckedOutBooks)
 
 	http.Handle("/", router)
-	log.Fatal(http.ListenAndServe(":8081",nil))
+	log.Fatal(http.ListenAndServe(":8080",nil))
 
 }
 
