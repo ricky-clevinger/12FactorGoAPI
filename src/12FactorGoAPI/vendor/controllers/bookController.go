@@ -4,6 +4,8 @@ import (
 	"net/http"
 	"database"
 	"encoding/json"
+//	"helper"
+	"mux"
 )
 
 //Get Books
@@ -17,9 +19,15 @@ func GetBooks(writer http.ResponseWriter, request *http.Request) {
 
 func AddBook(writer http.ResponseWriter, request *http.Request){
 
-	var title string = request.FormValue("title")
-	var authF string = request.FormValue("fname")
-	var authL string = request.FormValue("lname")
+	/*var title string = helper.HtmlClean(request.FormValue("title"))
+	var authF string = helper.HtmlClean(request.FormValue("fname"))
+	var authL string = helper.HtmlClean(request.FormValue("lname"))*/
+
+	varArray := mux.Vars(request)
+
+	title := varArray["title"]
+	authF := varArray["authF"]
+	authL := varArray["authL"]
 
 	if(len(title) == 0 || len(authF) == 0 || len(authL) == 0){
 
@@ -45,25 +53,25 @@ func GetSearchedBooks (writer http.ResponseWriter, request *http.Request){
 
 func GetCheckedInBooks(writer http.ResponseWriter, request *http.Request){
 
-
+	//TODO
 }
 
 func GetCheckedOutBooks(writer http.ResponseWriter, request *http.Request){
 
-
+	//TODO
 }
 
 func DeleteBook(writer http.ResponseWriter, request *http.Request){
 
-
+	//TODO
 }
 
 func UpdateBook(writer http.ResponseWriter, request *http.Request){
 
-
+	//TODO
 }
 
 func GetBooksById(writer http.ResponseWriter, request *http.Request){
 
-
+	//TODO
 }

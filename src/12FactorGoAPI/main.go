@@ -26,7 +26,7 @@ func handleRequests() {
 	router.HandleFunc("/members/update", controllers.UpdateMember)
 	router.HandleFunc("/members/{id}", controllers.GetMembersById)
 	router.HandleFunc("/books", controllers.GetBooks)
-	router.HandleFunc("/books/add", controllers.AddBook)
+	router.HandleFunc("/books/add/{title}/{authF}/{authL}", controllers.AddBook)
 	router.HandleFunc("/books/{id}", controllers.GetBooksById)
 	router.HandleFunc("/books/delete", controllers.DeleteBook)
 	router.HandleFunc("/books/update", controllers.UpdateBook)
@@ -36,7 +36,7 @@ func handleRequests() {
 
 
 	http.Handle("/", router)
-	log.Fatal(http.ListenAndServe(":8080",nil))
+	log.Fatal(http.ListenAndServe(":8081",router))
 
 }
 

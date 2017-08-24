@@ -18,10 +18,12 @@ func FourOhFour(writer http.ResponseWriter, request *http.Request){
 
 func WriteTransactionLogCheckIn(writer http.ResponseWriter, request *http.Request){
 
+	//TODO
 	database.WriteTransactionLogCheckIn()
 }
 
 func WriteTransactionLogCheckOut(writer http.ResponseWriter, request *http.Request){
 
+	//TODO
 	database.WriteTransactionLogCheckOut()
 }
