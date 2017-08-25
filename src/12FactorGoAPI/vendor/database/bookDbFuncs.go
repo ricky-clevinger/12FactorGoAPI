@@ -107,61 +107,55 @@ func GetSearchedBook(s string) []Book {
 
 	return books
 }
-/*
 
-func GetCheckedOutBook() []Book {
-	var checkedBooks []Book
+
+
+func GetCheckedOutBooks() []Book {
 	var books []Book
-
 
 	//DB Connection
 	db, err := sql.Open("mysql", connectionString)
 	helper.CheckErr(err)
 	defer db.Close() //Close after func GetBook ends
 
+	bookRows, err := db.Query("SELECT * FROM books WHERE Book_Check=2")
+	helper.CheckErr(err)
 
+	for bookRows.Next() {
 
-
-
-
-
-
-	for i := 0; i < len(books); i++ {
-		if books[i].Book_check == "Out" {
-			checkedBooks = append(checkedBooks, books[i])
-		}
+		b := Book{}
+		err = bookRows.Scan(&b.Book_id, &b.Book_title, &b.Book_authF, &b.Book_authL)
+		helper.CheckErr(err)
+		books = append(books, b)
 	}
 
-	return checkedBooks
-}
-*/
-/*
+	return books
 
-func GetCheckedInBook() []Book {
-	var checkedBooks []Book
+}
+
+
+
+func GetCheckedInBooks() []Book {
 	var books []Book
 
-	request, err := http.NewRequest("GET", apiUrl, nil)
+	//DB Connection
+	db, err := sql.Open("mysql", connectionString)
 	helper.CheckErr(err)
+	defer db.Close() //Close after func GetBook ends
 
-	client := &http.Client{}
+	bookRows, err := db.Query("SELECT * FROM books WHERE Book_Check=1")
 
-	response, err := client.Do(request)
-	helper.CheckErr(err)
-	defer response.Body.Close()
+	for bookRows.Next() {
 
-	err = json.NewDecoder(response.Body).Decode(&books)
-	helper.CheckErr(err)
-
-	for i := 0; i < len(books); i++ {
-		if books[i].Book_check == "In" {
-			checkedBooks = append(checkedBooks, books[i])
-		}
+		b := Book{}
+		err = bookRows.Scan(&b.Book_id, &b.Book_title, &b.Book_authF, &b.Book_authL)
+		helper.CheckErr(err)
+		books = append(books, b)
 	}
 
-	return checkedBooks
+	return books
 }
-*/
+
 
 
 //currently working

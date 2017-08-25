@@ -15,8 +15,10 @@ func handleRequests() {
 
 	router := mux.NewRouter()
 	router.HandleFunc("/home", controllers.HomePage)
+	router.HandleFunc("/home/", controllers.HomePage)
 	router.HandleFunc("/", controllers.FourOhFour)
 	router.HandleFunc("/members", controllers.GetMembers)
+	router.HandleFunc("/members/", controllers.GetMembers)
 	router.HandleFunc("/members/search/{searchString}", controllers.GetSearchedMembers)
 	router.HandleFunc("/members/add", controllers.AddMember)
 	router.HandleFunc("/members/delete", controllers.DeleteMember)
@@ -24,6 +26,7 @@ func handleRequests() {
 	router.HandleFunc("/members/{memid}", controllers.GetMembersById)
 	router.HandleFunc("/members/login/{mail}/{pass}", controllers.MemberExist)
 	router.HandleFunc("/books", controllers.GetBooks)
+	router.HandleFunc("/books/", controllers.GetBooks)
 	router.HandleFunc("/books/add/{title}/{authF}/{authL}", controllers.AddBook)
 	router.HandleFunc("/books/{bookid}", controllers.GetBooksById)
 	router.HandleFunc("/books/delete/{bookId}", controllers.DeleteBook)
@@ -35,7 +38,7 @@ func handleRequests() {
 
 
 	http.Handle("/", router)
-	log.Fatal(http.ListenAndServe(":8080",router))
+	log.Fatal(http.ListenAndServe(":8081",router))
 
 }
 

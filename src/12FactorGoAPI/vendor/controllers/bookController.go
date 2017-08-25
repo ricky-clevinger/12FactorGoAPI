@@ -63,11 +63,15 @@ func GetSearchedBooks (writer http.ResponseWriter, request *http.Request){
 func GetCheckedInBooks(writer http.ResponseWriter, request *http.Request){
 
 	//TODO
+	returnedBooks := database.GetCheckedInBooks()
+	json.NewEncoder(writer).Encode(returnedBooks)
 }
 
 func GetCheckedOutBooks(writer http.ResponseWriter, request *http.Request){
 
 	//TODO
+	returnedBooks := database.GetCheckedOutBooks()
+	json.NewEncoder(writer).Encode(returnedBooks)
 }
 
 //currently working, but
