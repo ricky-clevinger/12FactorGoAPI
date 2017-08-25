@@ -17,6 +17,7 @@ type Member struct {
 	Member_lname string `json:"Member_lname"`
 	Email string `json:"Email"`
 	Password string `json:"Password"`
+	Role string `json:"Role"`
 }
 
 func ReturnAllMembers () []Member {
@@ -27,13 +28,13 @@ func ReturnAllMembers () []Member {
 	helper.CheckErr(err)
 	defer db.Close()
 
-	memberRows, err1 := db.Query("SELECT member_id, member_fname, member_lname, Email, Password FROM member")
+	memberRows, err1 := db.Query("SELECT member_id, member_fname, member_lname, Email, Password, Role FROM member")
 	helper.CheckErr(err1)
 
 	for memberRows.Next() {
 
 		m := Member{}
-		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname, &m.Email, &m.Password)
+		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname, &m.Email, &m.Password, &m.Role)
 		helper.CheckErr(err)
 		members = append(members, m)
 	}
@@ -74,13 +75,13 @@ func MemberExist (mail, pass string) []Member {
 	helper.CheckErr(err)
 	defer db.Close()
 
-	memberRows, err1 := db.Query("SELECT Email, Password FROM member WHERE Email like ? AND Password like ?", mail, pass)
+	memberRows, err1 := db.Query("SELECT Email, Password, Role FROM member WHERE Email like ? AND Password like ?", mail, pass)
 	helper.CheckErr(err1)
 
 	for memberRows.Next() {
 
 		m := Member{}
-		err = memberRows.Scan(&m.Email, &m.Password)
+		err = memberRows.Scan(&m.Email, &m.Password, &m.Role)
 		helper.CheckErr(err)
 		members = append(members, m)
 	}
