@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42297cc5-903c-405c-a56f-ca14bffdb6cb" name="Default" comment="">
+    <list default="true" id="42297cc5-903c-405c-a56f-ca14bffdb6cb" name="Default" comment="f">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/12FactorGoAPI/main.go" afterPath="$PROJECT_DIR$/src/12FactorGoAPI/main.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/bookController.go" afterPath="$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/bookController.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go" afterPath="$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/bookDbFuncs.go" afterPath="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/bookDbFuncs.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go" afterPath="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,36 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="25" column="65" lean-forward="false" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+            <state relative-caret-position="291">
+              <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
               <folding>
-                <element signature="e#63#142#0" expanded="true" />
+                <element signature="e#63#144#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="genericController.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/genericController.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <element signature="e#21#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commonDbFuncs.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/commonDbFuncs.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -50,10 +33,16 @@
       <file leaf-file-name="bookController.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/bookController.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="95" column="19" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
               <folding>
-                <element signature="e#21#72#0" expanded="true" />
+                <element signature="e#21#89#0" expanded="true" />
+                <element signature="n#!!block;n#GetBooks#0" expanded="false" />
+                <element signature="n#!!block;n#AddBook#0" expanded="false" />
+                <element signature="n#!!block;n#GetSearchedBooks#0" expanded="false" />
+                <element signature="n#!!block;n#DeleteBook#0" expanded="false" />
+                <element signature="n#!!block;n#UpdateBook#0" expanded="false" />
+                <element signature="n#!!block;n#GetBooksById#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -62,13 +51,33 @@
       <file leaf-file-name="bookDbFuncs.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/bookDbFuncs.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="285">
+              <caret line="219" column="118" lean-forward="false" selection-start-line="219" selection-start-column="118" selection-end-line="219" selection-end-column="118" />
               <folding>
-                <marker date="1503586978105" expanded="true" signature="1020:1300" ph="SELECT b.Boo... books" />
-                <marker date="1503586978105" expanded="true" signature="2078:2195" ph="INSERT INTO books... " />
-                <marker date="1503586978105" expanded="true" signature="2615:2919" ph="SELECT b.Boo... books" />
+                <element signature="e#18#102#0" expanded="true" />
+                <element signature="e#114#621#0" expanded="false" />
+                <element signature="n#!!block;n#ReturnAllBooks#0" expanded="false" />
+                <element signature="e#3490#3871#0" expanded="false" />
+                <element signature="e#3872#4373#0" expanded="false" />
+                <element signature="n#!!block;n#GetBookById#0" expanded="false" />
+                <element signature="e#4860#4992#0" expanded="false" />
+                <marker date="1503674546115" expanded="true" signature="986:1266" ph="SELECT b.Boo... books" />
+                <marker date="1503674546115" expanded="true" signature="2065:2182" ph="INSERT INTO books... " />
+                <marker date="1503674546115" expanded="true" signature="2674:2978" ph="SELECT b.Boo... books" />
+                <marker date="1503674546115" expanded="true" signature="4572:4659" ph="SELECT book_... book" />
+                <marker date="1503674546115" expanded="true" signature="5185:5220" ph="Delete from " />
+                <marker date="1503674546115" expanded="true" signature="5433:5522" ph="Update books... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="memberController.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,30 +85,13 @@
       <file leaf-file-name="memberDbFuncs.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1153">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="111" column="77" lean-forward="true" selection-start-line="111" selection-start-column="77" selection-end-line="111" selection-end-column="77" />
               <folding>
-                <element signature="e#18#114#0" expanded="true" />
-                <marker date="1503600877653" expanded="true" signature="506:562" ph="SELECT membe... member" />
-                <marker date="1503600877653" expanded="true" signature="1326:2174" ph="{...}" />
-                <marker date="1503600877653" expanded="true" signature="1428:1696" ph="/*...*/" />
-                <marker date="1503600877653" expanded="true" signature="1729:1805" ph="SELECT membe... member" />
-                <marker date="1503600877653" expanded="true" signature="1862:2009" ph="{...}" />
-                <marker date="1503600877653" expanded="true" signature="2046:2156" ph="{...}" />
-                <marker date="1503600877653" expanded="true" signature="2109:2153" ph="{...}" />
-                <marker date="1503600877653" expanded="true" signature="2580:2685" ph="SELECT membe... member" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="memberController.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="66" column="10" lean-forward="false" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-              <folding>
-                <element signature="e#21#73#0" expanded="true" />
+                <element signature="e#18#102#0" expanded="true" />
+                <marker date="1503672205360" expanded="true" signature="558:631" ph="SELECT membe... member" />
+                <marker date="1503672205360" expanded="true" signature="1553:1626" ph="SELECT Email... member" />
+                <marker date="1503672205360" expanded="true" signature="2236:2341" ph="SELECT membe... member" />
               </folding>
             </state>
           </provider>
@@ -126,13 +118,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/helper/cleaningFuncs.go" />
         <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/databaseFuncs.go" />
-        <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go" />
-        <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/bookDbFuncs.go" />
         <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/genericController.go" />
         <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/commonDbFuncs.go" />
+        <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go" />
+        <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go" />
+        <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/bookDbFuncs.go" />
         <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/bookController.go" />
         <option value="$PROJECT_DIR$/src/12FactorGoAPI/main.go" />
-        <option value="$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go" />
       </list>
     </option>
   </component>
@@ -142,11 +134,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="155" />
-    <option name="y" value="92" />
-    <option name="width" value="1626" />
-    <option name="height" value="910" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="187" />
+    <option name="y" value="26" />
+    <option name="width" value="1400" />
+    <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -164,7 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,30 +212,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="12FactorGoAPI" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="gorilla" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="12FactorGoAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12FactorGoAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="12FactorGoAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="12FactorGoAPI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="12FactorGoAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="12FactorGoAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="mux" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,6 +242,8 @@
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/main.go</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -274,20 +251,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/Untitled Document</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/bench_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/context_gorilla.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/context_gorilla_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/context_native.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/context_native_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/doc.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/mux.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/mux_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/old_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/regexp.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/mux/route.go</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -295,20 +258,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/Untitled Document</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/bench_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/context_gorilla.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/context_gorilla_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/context_native.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/context_native_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/doc.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/mux.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/mux_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/old_test.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/regexp.go</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/12FactorGoAPI/vendor/github.com/gorilla/stuff/route.go</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -418,26 +367,47 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="155" y="92" width="1626" height="910" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1006" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17896679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15687332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.50246" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.50246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.49753997" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35696518" sideWeight="0.49753997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3188889" sideWeight="0.49753997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49753997" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.50246" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49753997" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35696518" sideWeight="0.49753997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17896679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -449,19 +419,109 @@
     <MESSAGE value="hey mom, we're mvc now" />
     <MESSAGE value="bunch of changes" />
     <MESSAGE value="added some more routes, and more to do functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some more routes, and more to do functions" />
+    <MESSAGE value="changed some routing and made add books work again" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed some routing and made add books work again" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/main.go">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#63#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/genericController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+          <folding>
+            <element signature="e#21#62#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/commonDbFuncs.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/bookController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="86" column="20" lean-forward="false" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+          <folding>
+            <element signature="e#21#89#0" expanded="true" />
+            <element signature="n#!!block;n#GetBooks#0" expanded="false" />
+            <element signature="n#!!block;n#AddBook#0" expanded="false" />
+            <element signature="n#!!block;n#GetSearchedBooks#0" expanded="false" />
+            <element signature="n#!!block;n#DeleteBook#0" expanded="false" />
+            <element signature="n#!!block;n#UpdateBook#0" expanded="false" />
+            <element signature="n#!!block;n#GetBooksById#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/bookDbFuncs.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#18#102#0" expanded="true" />
+            <element signature="e#114#621#0" expanded="false" />
+            <element signature="n#!!block;n#ReturnAllBooks#0" expanded="false" />
+            <element signature="e#3490#3871#0" expanded="false" />
+            <element signature="e#3872#4373#0" expanded="false" />
+            <element signature="n#!!block;n#GetBookById#0" expanded="false" />
+            <element signature="e#4860#4992#0" expanded="false" />
+            <marker date="1503674546115" expanded="true" signature="986:1266" ph="SELECT b.Boo... books" />
+            <marker date="1503674546115" expanded="true" signature="2065:2182" ph="INSERT INTO books... " />
+            <marker date="1503674546115" expanded="true" signature="2674:2978" ph="SELECT b.Boo... books" />
+            <marker date="1503674546115" expanded="true" signature="4572:4659" ph="SELECT book_... book" />
+            <marker date="1503674546115" expanded="true" signature="5185:5220" ph="Delete from " />
+            <marker date="1503674546115" expanded="true" signature="5433:5522" ph="Update books... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#18#102#0" expanded="true" />
+            <marker date="1503672205360" expanded="true" signature="558:631" ph="SELECT membe... member" />
+            <marker date="1503672205360" expanded="true" signature="1553:1626" ph="SELECT Email... member" />
+            <marker date="1503672205360" expanded="true" signature="2236:2341" ph="SELECT membe... member" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/main.go">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
-            <element signature="e#63#142#0" expanded="true" />
+            <element signature="e#63#144#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -471,9 +531,19 @@
         <state relative-caret-position="270">
           <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
-            <marker date="1503586978105" expanded="true" signature="1020:1300" ph="SELECT b.Boo... books" />
-            <marker date="1503586978105" expanded="true" signature="2078:2195" ph="INSERT INTO books... " />
-            <marker date="1503586978105" expanded="true" signature="2615:2919" ph="SELECT b.Boo... books" />
+            <element signature="e#18#102#0" expanded="true" />
+            <element signature="e#114#621#0" expanded="false" />
+            <element signature="n#!!block;n#ReturnAllBooks#0" expanded="false" />
+            <element signature="e#3490#3871#0" expanded="false" />
+            <element signature="e#3872#4373#0" expanded="false" />
+            <element signature="n#!!block;n#GetBookById#0" expanded="false" />
+            <element signature="e#4860#4992#0" expanded="false" />
+            <marker date="1503674546115" expanded="true" signature="986:1266" ph="SELECT b.Boo... books" />
+            <marker date="1503674546115" expanded="true" signature="2065:2182" ph="INSERT INTO books... " />
+            <marker date="1503674546115" expanded="true" signature="2674:2978" ph="SELECT b.Boo... books" />
+            <marker date="1503674546115" expanded="true" signature="4572:4659" ph="SELECT book_... book" />
+            <marker date="1503674546115" expanded="true" signature="5185:5220" ph="Delete from " />
+            <marker date="1503674546115" expanded="true" signature="5433:5522" ph="Update books... " />
           </folding>
         </state>
       </provider>
@@ -482,9 +552,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#29#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -492,9 +560,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="e#21#73#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -502,9 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#33#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -512,9 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -523,15 +583,10 @@
         <state relative-caret-position="1440">
           <caret line="90" column="52" lean-forward="true" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="52" />
           <folding>
-            <element signature="e#18#114#0" expanded="true" />
-            <marker date="1503600877653" expanded="true" signature="506:562" ph="SELECT membe... member" />
-            <marker date="1503600877653" expanded="true" signature="1326:2174" ph="{...}" />
-            <marker date="1503600877653" expanded="true" signature="1428:1696" ph="/*...*/" />
-            <marker date="1503600877653" expanded="true" signature="1729:1805" ph="SELECT membe... member" />
-            <marker date="1503600877653" expanded="true" signature="1862:2009" ph="{...}" />
-            <marker date="1503600877653" expanded="true" signature="2046:2156" ph="{...}" />
-            <marker date="1503600877653" expanded="true" signature="2109:2153" ph="{...}" />
-            <marker date="1503600877653" expanded="true" signature="2580:2685" ph="SELECT membe... member" />
+            <element signature="e#18#102#0" expanded="true" />
+            <marker date="1503672205360" expanded="true" signature="558:631" ph="SELECT membe... member" />
+            <marker date="1503672205360" expanded="true" signature="1553:1626" ph="SELECT Email... member" />
+            <marker date="1503672205360" expanded="true" signature="2236:2341" ph="SELECT membe... member" />
           </folding>
         </state>
       </provider>
@@ -541,7 +596,7 @@
         <state relative-caret-position="1278">
           <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
           <folding>
-            <element signature="e#63#142#0" expanded="true" />
+            <element signature="e#63#144#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -550,9 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#33#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -560,9 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -571,7 +620,7 @@
         <state relative-caret-position="1278">
           <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
           <folding>
-            <element signature="e#63#142#0" expanded="true" />
+            <element signature="e#63#144#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,9 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#33#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,9 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -601,96 +644,99 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#33#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/helper/cleaningFuncs.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="198">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#16#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1153">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#114#0" expanded="true" />
-            <marker date="1503600877653" expanded="true" signature="506:562" ph="SELECT membe... member" />
-            <marker date="1503600877653" expanded="true" signature="1326:2174" ph="{...}" />
-            <marker date="1503600877653" expanded="true" signature="1428:1696" ph="/*...*/" />
-            <marker date="1503600877653" expanded="true" signature="1729:1805" ph="SELECT membe... member" />
-            <marker date="1503600877653" expanded="true" signature="1862:2009" ph="{...}" />
-            <marker date="1503600877653" expanded="true" signature="2046:2156" ph="{...}" />
-            <marker date="1503600877653" expanded="true" signature="2109:2153" ph="{...}" />
-            <marker date="1503600877653" expanded="true" signature="2580:2685" ph="SELECT membe... member" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/bookDbFuncs.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <marker date="1503586978105" expanded="true" signature="1020:1300" ph="SELECT b.Boo... books" />
-            <marker date="1503586978105" expanded="true" signature="2078:2195" ph="INSERT INTO books... " />
-            <marker date="1503586978105" expanded="true" signature="2615:2919" ph="SELECT b.Boo... books" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/commonDbFuncs.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/genericController.go">
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/memberDbFuncs.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="476">
+          <caret line="111" column="77" lean-forward="true" selection-start-line="111" selection-start-column="77" selection-end-line="111" selection-end-column="77" />
           <folding>
-            <element signature="e#21#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="25" column="65" lean-forward="false" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-          <folding>
-            <element signature="e#63#142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/bookController.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="e#21#72#0" expanded="true" />
+            <element signature="e#18#102#0" expanded="true" />
+            <marker date="1503672205360" expanded="true" signature="558:631" ph="SELECT membe... member" />
+            <marker date="1503672205360" expanded="true" signature="1553:1626" ph="SELECT Email... member" />
+            <marker date="1503672205360" expanded="true" signature="2236:2341" ph="SELECT membe... member" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/memberController.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="66" column="10" lean-forward="false" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+        <state relative-caret-position="317">
+          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/genericController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
-            <element signature="e#21#73#0" expanded="true" />
+            <element signature="e#21#62#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/database/bookDbFuncs.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="219" column="118" lean-forward="false" selection-start-line="219" selection-start-column="118" selection-end-line="219" selection-end-column="118" />
+          <folding>
+            <element signature="e#18#102#0" expanded="true" />
+            <element signature="e#114#621#0" expanded="false" />
+            <element signature="n#!!block;n#ReturnAllBooks#0" expanded="false" />
+            <element signature="e#3490#3871#0" expanded="false" />
+            <element signature="e#3872#4373#0" expanded="false" />
+            <element signature="n#!!block;n#GetBookById#0" expanded="false" />
+            <element signature="e#4860#4992#0" expanded="false" />
+            <marker date="1503674546115" expanded="true" signature="986:1266" ph="SELECT b.Boo... books" />
+            <marker date="1503674546115" expanded="true" signature="2065:2182" ph="INSERT INTO books... " />
+            <marker date="1503674546115" expanded="true" signature="2674:2978" ph="SELECT b.Boo... books" />
+            <marker date="1503674546115" expanded="true" signature="4572:4659" ph="SELECT book_... book" />
+            <marker date="1503674546115" expanded="true" signature="5185:5220" ph="Delete from " />
+            <marker date="1503674546115" expanded="true" signature="5433:5522" ph="Update books... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/vendor/controllers/bookController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="95" column="19" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
+          <folding>
+            <element signature="e#21#89#0" expanded="true" />
+            <element signature="n#!!block;n#GetBooks#0" expanded="false" />
+            <element signature="n#!!block;n#AddBook#0" expanded="false" />
+            <element signature="n#!!block;n#GetSearchedBooks#0" expanded="false" />
+            <element signature="n#!!block;n#DeleteBook#0" expanded="false" />
+            <element signature="n#!!block;n#UpdateBook#0" expanded="false" />
+            <element signature="n#!!block;n#GetBooksById#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/12FactorGoAPI/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <element signature="e#63#144#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -23,7 +23,7 @@ func GetMembers(writer http.ResponseWriter, request *http.Request) {
 func GetMembersById(writer http.ResponseWriter, request *http.Request){
 
 	varArray := mux.Vars(request)
-	id := varArray["id"]
+	id := varArray["memid"]
 
 	if(len(id) == 0){
 
@@ -33,6 +33,8 @@ func GetMembersById(writer http.ResponseWriter, request *http.Request){
 
 		members := database.ReturnMembersById(id)
 		json.NewEncoder(writer).Encode(members)
+		//writer.WriteHeader(http.StatusOK)
+		//writer.Write([]byte("Success"))
 	}
 
 }
@@ -66,7 +68,10 @@ func MemberExist(writer http.ResponseWriter, request *http.Request){
  */
 func GetSearchedMembers(writer http.ResponseWriter, request *http.Request){
 
-	searchString := request.FormValue("s-bar")
+	//searchString := request.FormValue("s-bar")
+	vars := mux.Vars(request)
+
+	searchString := vars["searchString"]
 
 	members := database.GetSearchedMember(searchString)
 

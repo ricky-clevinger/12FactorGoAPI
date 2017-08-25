@@ -4,12 +4,7 @@ import(
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"helper"
-
-	//"os"
 	"fmt"
-	//"net/http"
-	//"encoding/json"
-	//"strconv"
 	"os"
 )
 
@@ -25,6 +20,8 @@ type Book struct {
 	Member_fname  sql.NullString `json:"Member_fname"`
 	Member_lname  sql.NullString `json:"Member_lname"`
 }
+
+//currently working
 
 func ReturnAllBooks() []Book {
 
@@ -57,6 +54,8 @@ func ReturnAllBooks() []Book {
 	return books
 }
 
+//currently working
+
 func AddBook(title string, authF string, authL string) {
 	Book_title := title
 	Book_authF := authF
@@ -72,6 +71,9 @@ func AddBook(title string, authF string, authL string) {
 
 	stmt.Exec(Book_title, Book_authF, Book_authL)
 }
+
+//function is working, but
+//	wild cards are not working, troubleshoot
 
 func GetSearchedBook(s string) []Book {
 
@@ -111,17 +113,18 @@ func GetCheckedOutBook() []Book {
 	var checkedBooks []Book
 	var books []Book
 
-	request, err := http.NewRequest("GET", apiUrl, nil)
-	helper.CheckErr(err)
 
-	client := &http.Client{}
-
-	response, err := client.Do(request)
+	//DB Connection
+	db, err := sql.Open("mysql", connectionString)
 	helper.CheckErr(err)
-	defer response.Body.Close()
+	defer db.Close() //Close after func GetBook ends
 
-	err = json.NewDecoder(response.Body).Decode(&books)
-	helper.CheckErr(err)
+
+
+
+
+
+
 
 	for i := 0; i < len(books); i++ {
 		if books[i].Book_check == "Out" {
@@ -160,35 +163,62 @@ func GetCheckedInBook() []Book {
 }
 */
 
-/*
 
+//currently working
 func GetBookById(id string) []Book {
-	var book []Book
+
 	var books []Book
-	intId, err := strconv.Atoi(id)
+
+
+	db, err := sql.Open("mysql", connectionString)
 	helper.CheckErr(err)
+	defer db.Close()
 
-	request, err := http.NewRequest("GET", apiUrl, nil)
-	helper.CheckErr(err)
+	bookRows, err1 := db.Query("SELECT book_id, book_title, book_authfname, book_authlname FROM books WHERE book_id = ?", id)
+	helper.CheckErr(err1)
 
-	client := &http.Client{}
+	for bookRows.Next() {
 
-	response, err := client.Do(request)
-	helper.CheckErr(err)
-	defer response.Body.Close()
-
-	err = json.NewDecoder(response.Body).Decode(&books)
-	helper.CheckErr(err)
-
+		b := Book{}
+		err = bookRows.Scan(&b.Book_id, &b.Book_title, &b.Book_authF, &b.Book_authL)
+		helper.CheckErr(err)
+		books = append(books, b)
+	}
+/*
 	for i := 0; i < len(books); i++ {
-		booksId := books[i].Book_id
+		bookId := books[i].Book_id
 
-		if booksId == intId {
+		if bookId == intId {
 			book = append(book, books[i])
 		}
-	}
+	}*/
 
-	return book
+	return books
 }
-*/
 
+//currently working
+
+func DeleteBookById(id string){
+
+
+	db, err := sql.Open("mysql", os.Getenv("LIBRARY"))
+	helper.CheckErr(err)
+	defer db.Close()
+
+	stmt, err := db.Prepare("Delete from books where book_id = ?")
+	helper.CheckErr(err)
+
+	stmt.Exec(id)
+}
+
+func UpdateBook(id, title, authF, authL string){
+
+	db, err := sql.Open("mysql", os.Getenv("LIBRARY"))
+	helper.CheckErr(err)
+	defer db.Close()
+
+	stmt, err := db.Prepare("Update books Set book_title = ?, book_authfname = ?, book_authlname = ? where book_id = ?")
+	helper.CheckErr(err)
+
+	stmt.Exec(title, authF, authL, id)
+}
