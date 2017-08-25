@@ -25,6 +25,7 @@ func handleRequests() {
 	router.HandleFunc("/members/delete", controllers.DeleteMember)
 	router.HandleFunc("/members/update", controllers.UpdateMember)
 	router.HandleFunc("/members/id/{id}", controllers.GetMembersById)
+	router.HandleFunc("/members/login/{mail}/{pass}", controllers.MemberExist)
 	router.HandleFunc("/books", controllers.GetBooks)
 	router.HandleFunc("/books/add/{title}/{authF}/{authL}", controllers.AddBook)
 	router.HandleFunc("/books/{id}", controllers.GetBooksById)
@@ -33,6 +34,7 @@ func handleRequests() {
 	router.HandleFunc("/books/search", controllers.GetSearchedBooks)
 	router.HandleFunc("/books/checkedin", controllers.GetCheckedInBooks)
 	router.HandleFunc("/books/checkedout", controllers.GetCheckedOutBooks)
+	
 
 
 	http.Handle("/", router)

@@ -38,6 +38,28 @@ func GetMembersById(writer http.ResponseWriter, request *http.Request){
 }
 
 /**
+	Searches for a member by their member id number, using the method
+	of the same name in the memberDbFuncs file
+ */
+func MemberExist(writer http.ResponseWriter, request *http.Request){
+
+	varArray := mux.Vars(request)
+	mail := varArray["mail"]
+	pass := varArray["pass"]
+
+	if(len(mail) == 0){
+
+		writer.WriteHeader(http.StatusNotAcceptable)
+		writer.Write([]byte("Missing Id - Notify administrator"))
+	}else{
+
+		members := database.MemberExist(mail, pass)
+		json.NewEncoder(writer).Encode(members)
+	}
+
+}
+
+/**
 	Searches for members by both first and last name using the method of
 	the same name in the memberDbFuncs file
 

@@ -28,13 +28,13 @@ func ReturnAllMembers () []Member {
 	helper.CheckErr(err)
 	defer db.Close()
 
-	memberRows, err1 := db.Query("SELECT member_id, member_fname, member_lname, Email FROM member")
+	memberRows, err1 := db.Query("SELECT member_id, member_fname, member_lname, Email, Password FROM member")
 	helper.CheckErr(err1)
 
 	for memberRows.Next() {
 
 		m := Member{}
-		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname, &m.Email)
+		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname, &m.Email, &m.Password)
 		helper.CheckErr(err)
 		members = append(members, m)
 	}
@@ -58,7 +58,30 @@ func ReturnMembersById (id string) []Member {
 	for memberRows.Next() {
 
 		m := Member{}
-		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname, &m.Email)
+		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname)
+		helper.CheckErr(err)
+		members = append(members, m)
+	}
+
+	return members
+}
+
+func MemberExist (mail, pass string) []Member {
+
+
+	var members []Member
+
+	db, err := sql.Open("mysql", connectionString)
+	helper.CheckErr(err)
+	defer db.Close()
+
+	memberRows, err1 := db.Query("SELECT Email, Password FROM member WHERE Email like ? AND Password like ?", mail, pass)
+	helper.CheckErr(err1)
+
+	for memberRows.Next() {
+
+		m := Member{}
+		err = memberRows.Scan(&m.Email, &m.Password)
 		helper.CheckErr(err)
 		members = append(members, m)
 	}
