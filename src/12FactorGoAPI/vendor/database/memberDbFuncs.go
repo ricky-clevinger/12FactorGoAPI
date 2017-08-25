@@ -16,6 +16,8 @@ type Member struct {
 	Member_id    int    `json:"Member_id"`
 	Member_fname string `json:"Member_fname"`
 	Member_lname string `json:"Member_lname"`
+	Email string `json:"Email"`
+	Password string `json:"Password"`
 }
 
 func ReturnAllMembers () []Member {
@@ -26,13 +28,13 @@ func ReturnAllMembers () []Member {
 	helper.CheckErr(err)
 	defer db.Close()
 
-	memberRows, err1 := db.Query("SELECT member_id, member_fname, member_lname FROM member")
+	memberRows, err1 := db.Query("SELECT member_id, member_fname, member_lname, Email FROM member")
 	helper.CheckErr(err1)
 
 	for memberRows.Next() {
 
 		m := Member{}
-		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname)
+		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname, &m.Email)
 		helper.CheckErr(err)
 		members = append(members, m)
 	}
@@ -56,7 +58,7 @@ func ReturnMembersById (id string) []Member {
 	for memberRows.Next() {
 
 		m := Member{}
-		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname)
+		err = memberRows.Scan(&m.Member_id, &m.Member_fname, &m.Member_lname, &m.Email)
 		helper.CheckErr(err)
 		members = append(members, m)
 	}
