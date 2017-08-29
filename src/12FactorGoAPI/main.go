@@ -6,7 +6,6 @@ package main
 import (
 	"log"
 	"net/http"
-	//_ "github.com/gorilla/mux"
 	"mux"
 	"controllers"
 )
