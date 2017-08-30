@@ -55,7 +55,7 @@ func MemberExist(writer http.ResponseWriter, request *http.Request){
 		writer.Write([]byte("Missing Id - Notify administrator"))
 	}else{
 
-		members := database.MemberExist(mail, pass)
+		members := database.MemberExist(mail,pass)
 		json.NewEncoder(writer).Encode(members)
 	}
 

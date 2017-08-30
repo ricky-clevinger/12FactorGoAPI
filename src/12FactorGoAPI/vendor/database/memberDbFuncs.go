@@ -66,7 +66,7 @@ func ReturnMembersById (id string) []Member {
 	return members
 }
 
-func MemberExist (mail, pass string) []Member {
+func MemberExist (mail,pass string) []Member {
 
 
 	var members []Member
@@ -75,7 +75,7 @@ func MemberExist (mail, pass string) []Member {
 	helper.CheckErr(err)
 	defer db.Close()
 
-	memberRows, err1 := db.Query("SELECT Email, Password, Role FROM member WHERE Email like ? AND Password like ?", mail, pass)
+	memberRows, err1 := db.Query("SELECT Email, Password, Role FROM member WHERE Email like ? AND Password LIKE ?", mail, pass)
 	helper.CheckErr(err1)
 
 	for memberRows.Next() {
