@@ -3,8 +3,6 @@ set -e -u -x
 cd go-library-source
 ls -a
 
-git clone git://github.com/pliniocsfernandes/flyway-command-line.git 
-
 export GOPATH=$PWD
 export PATH=$PATH:$GOPATH:$GOPATH/src/12FactorGoAPI
 cd src/12FactorGoAPI
