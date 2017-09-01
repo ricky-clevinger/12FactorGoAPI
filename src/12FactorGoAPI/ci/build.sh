@@ -6,8 +6,6 @@ ls -a
 export GOPATH=$PWD
 export PATH=$PATH:$GOPATH
 
-flyway validate -configFile=flyway.conf
-
 cd src/12FactorGoAPI
 ls -a
 go build main.go
