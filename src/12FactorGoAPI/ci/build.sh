@@ -6,7 +6,7 @@ ls -a
 git clone git://github.com/pliniocsfernandes/flyway-command-line.git 
 
 export GOPATH=$PWD
-export PATH=$PATH:$GOPATH:go-library-source/src/12FactorGoAPI
+export PATH=$PATH:$GOPATH:$GOPATH/src/12FactorGoAPI
 cd src/12FactorGoAPI
 
 flyway validate -configFile=flyway.conf
