@@ -4,7 +4,7 @@ cd go-library-source
 ls -a
 
 export GOPATH=$PWD
-export PATH=$PATH:$GOPATH:$GOPATH/src/12FactorGoAPI
+export PATH=$PATH:$GOPATH:$GOPATH/src/12FactorGoAPI/flyway
 cd src/12FactorGoAPI
 
 flyway validate -configFile=flyway.conf
