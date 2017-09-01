@@ -2,7 +2,7 @@ package main
 
 //Author: C Neuhardt
 //Last Updated: 8/3/2017
-//
+
 import (
 	"log"
 	"net/http"
@@ -37,7 +37,7 @@ func handleRequests() {
 
 
 	http.Handle("/", router)
-	log.Fatal(http.ListenAndServe(":8080",router))
+	log.Fatal(http.ListenAndServe(":8081",router))
 
 }
 
